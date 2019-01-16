@@ -1,0 +1,462 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.Id3 
+Relation:     car
+Instances:    1728
+Attributes:   7
+              compra
+              maint
+              puertas
+              personas
+              lug_boot
+              seguridad
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Id3
+
+
+seguridad = low: unacc
+seguridad = med
+|  personas = 2: unacc
+|  personas = 3: null
+|  personas = 4
+|  |  compra = vhigh
+|  |  |  maint = vhigh: unacc
+|  |  |  maint = high: unacc
+|  |  |  maint = med
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: unacc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = low
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: unacc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  compra = high
+|  |  |  lug_boot = small: unacc
+|  |  |  lug_boot = med
+|  |  |  |  puertas = 2: unacc
+|  |  |  |  puertas = 3: unacc
+|  |  |  |  puertas = 4
+|  |  |  |  |  maint = vhigh: unacc
+|  |  |  |  |  maint = high: acc
+|  |  |  |  |  maint = med: acc
+|  |  |  |  |  maint = low: acc
+|  |  |  |  puertas = 5more
+|  |  |  |  |  maint = vhigh: unacc
+|  |  |  |  |  maint = high: acc
+|  |  |  |  |  maint = med: acc
+|  |  |  |  |  maint = low: acc
+|  |  |  lug_boot = big
+|  |  |  |  maint = vhigh: unacc
+|  |  |  |  maint = high: acc
+|  |  |  |  maint = med: acc
+|  |  |  |  maint = low: acc
+|  |  compra = med
+|  |  |  maint = vhigh
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: unacc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = high
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: unacc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = med: acc
+|  |  |  maint = low
+|  |  |  |  lug_boot = small: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = big: good
+|  |  compra = low
+|  |  |  maint = vhigh
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: unacc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = high: acc
+|  |  |  maint = med
+|  |  |  |  lug_boot = small: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = big: good
+|  |  |  maint = low
+|  |  |  |  lug_boot = small: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = big: good
+|  personas = more
+|  |  compra = vhigh
+|  |  |  maint = vhigh: unacc
+|  |  |  maint = high: unacc
+|  |  |  maint = med
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = low
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  compra = high
+|  |  |  lug_boot = small: unacc
+|  |  |  lug_boot = med
+|  |  |  |  maint = vhigh: unacc
+|  |  |  |  maint = high
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  maint = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  maint = low
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  lug_boot = big
+|  |  |  |  maint = vhigh: unacc
+|  |  |  |  maint = high: acc
+|  |  |  |  maint = med: acc
+|  |  |  |  maint = low: acc
+|  |  compra = med
+|  |  |  maint = vhigh
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = high
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = med
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = low
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = big: good
+|  |  compra = low
+|  |  |  maint = vhigh
+|  |  |  |  lug_boot = small: unacc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = big: acc
+|  |  |  maint = high
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = med
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = big: good
+|  |  |  maint = low
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = big: good
+seguridad = high
+|  personas = 2: unacc
+|  personas = 3: null
+|  personas = 4
+|  |  compra = vhigh
+|  |  |  maint = vhigh: unacc
+|  |  |  maint = high: unacc
+|  |  |  maint = med: acc
+|  |  |  maint = low: acc
+|  |  compra = high
+|  |  |  maint = vhigh: unacc
+|  |  |  maint = high: acc
+|  |  |  maint = med: acc
+|  |  |  maint = low: acc
+|  |  compra = med
+|  |  |  maint = vhigh: acc
+|  |  |  maint = high: acc
+|  |  |  maint = med
+|  |  |  |  lug_boot = small: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  |  maint = low
+|  |  |  |  lug_boot = small: good
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: good
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  compra = low
+|  |  |  maint = vhigh: acc
+|  |  |  maint = high
+|  |  |  |  lug_boot = small: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  |  maint = med
+|  |  |  |  lug_boot = small: good
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: good
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  |  maint = low
+|  |  |  |  lug_boot = small: good
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: good
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  personas = more
+|  |  compra = vhigh
+|  |  |  maint = vhigh: unacc
+|  |  |  maint = high: unacc
+|  |  |  maint = med
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = low
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  compra = high
+|  |  |  maint = vhigh: unacc
+|  |  |  maint = high
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = med
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = low
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  compra = med
+|  |  |  maint = vhigh
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = high
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = med
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: vgood
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  |  maint = low
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: good
+|  |  |  |  |  puertas = 3: vgood
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  compra = low
+|  |  |  maint = vhigh
+|  |  |  |  puertas = 2
+|  |  |  |  |  lug_boot = small: unacc
+|  |  |  |  |  lug_boot = med: acc
+|  |  |  |  |  lug_boot = big: acc
+|  |  |  |  puertas = 3: acc
+|  |  |  |  puertas = 4: acc
+|  |  |  |  puertas = 5more: acc
+|  |  |  maint = high
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: acc
+|  |  |  |  |  puertas = 4: acc
+|  |  |  |  |  puertas = 5more: acc
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: acc
+|  |  |  |  |  puertas = 3: vgood
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  |  maint = med
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: good
+|  |  |  |  |  puertas = 3: vgood
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+|  |  |  maint = low
+|  |  |  |  lug_boot = small
+|  |  |  |  |  puertas = 2: unacc
+|  |  |  |  |  puertas = 3: good
+|  |  |  |  |  puertas = 4: good
+|  |  |  |  |  puertas = 5more: good
+|  |  |  |  lug_boot = med
+|  |  |  |  |  puertas = 2: good
+|  |  |  |  |  puertas = 3: vgood
+|  |  |  |  |  puertas = 4: vgood
+|  |  |  |  |  puertas = 5more: vgood
+|  |  |  |  lug_boot = big: vgood
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1544               89.3519 %
+Incorrectly Classified Instances        61                3.5301 %
+Kappa statistic                          0.9071
+Mean absolute error                      0.019 
+Root mean squared error                  0.1379
+Relative absolute error                  9.4937 %
+Root relative squared error             45.0502 %
+UnClassified Instances                 123                7.1181 %
+Total Number of Instances             1728     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,974    0,017    0,994      0,974    0,984      0,939    0,977     0,985     unacc
+                 0,936    0,026    0,898      0,936    0,917      0,897    0,868     0,736     acc
+                 0,787    0,008    0,755      0,787    0,771      0,764    0,764     0,423     good
+                 1,000    0,006    0,830      1,000    0,907      0,909    0,836     0,574     vgood
+Weighted Avg.    0,962    0,018    0,964      0,962    0,963      0,925    0,946     0,909     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1171   28    3    0 |    a = unacc
+    7  292    9    4 |    b = acc
+    0    5   37    5 |    c = good
+    0    0    0   44 |    d = vgood
+

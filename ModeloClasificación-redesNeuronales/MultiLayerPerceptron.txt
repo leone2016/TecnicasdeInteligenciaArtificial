@@ -1,0 +1,451 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     car
+Instances:    1728
+Attributes:   7
+              compra
+              maint
+              puertas
+              personas
+              lug_boot
+              seguridad
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -7.089289601624143
+    Node 4    3.3747686746248333
+    Node 5    2.6868953866320786
+    Node 6    0.7353534414026197
+    Node 7    5.630039116915886
+    Node 8    -1.4013744984215624
+    Node 9    3.1139741096699733
+    Node 10    8.917857518086198
+    Node 11    6.967126124824484
+    Node 12    6.802849805755207
+    Node 13    1.6171918623805763
+    Node 14    4.52759425255787
+    Node 15    2.7465829846063823
+    Node 16    -4.239025171676373
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -3.862704263861136
+    Node 4    -5.689900331415147
+    Node 5    -5.102503647341415
+    Node 6    5.451021802778013
+    Node 7    -6.591736285669901
+    Node 8    10.61646870082882
+    Node 9    -4.9915306574626035
+    Node 10    -7.93976921183265
+    Node 11    -9.002779997692551
+    Node 12    -6.450036991250247
+    Node 13    -2.9156156487254403
+    Node 14    -5.195953216535648
+    Node 15    -5.7510038646004435
+    Node 16    9.00131012307914
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -4.528226061316188
+    Node 4    -0.618680353704194
+    Node 5    -0.3080220058837525
+    Node 6    -9.639435682032525
+    Node 7    -2.652854557757761
+    Node 8    -8.638829623935175
+    Node 9    0.47766012801736946
+    Node 10    -4.121239666151613
+    Node 11    -1.2039784521039847
+    Node 12    -5.154296150641667
+    Node 13    -4.23682026153086
+    Node 14    -3.6241044605022954
+    Node 15    9.198809753151686
+    Node 16    1.2624861761231199
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    5.4829919031594425
+    Node 4    0.7556530775655247
+    Node 5    1.1211370252942523
+    Node 6    -1.5678956216239444
+    Node 7    -3.132903171874411
+    Node 8    -7.369804574214994
+    Node 9    -1.5109815070319943
+    Node 10    -4.105369163659314
+    Node 11    -0.9039221379784258
+    Node 12    -2.01354686979474
+    Node 13    -3.3694736243259404
+    Node 14    -1.3737316884653825
+    Node 15    -9.82868024803139
+    Node 16    -6.160636377239437
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    0.5338562006627856
+    Attrib compra=vhigh    1.9152984297488655
+    Attrib compra=high    0.21767327998801486
+    Attrib compra=med    -0.9662064916656105
+    Attrib compra=low    -2.2532159449834968
+    Attrib maint=vhigh    1.6221700466767488
+    Attrib maint=high    0.14196993121354434
+    Attrib maint=med    -1.4611540766103608
+    Attrib maint=low    -1.4931394865007994
+    Attrib puertas=2    -1.5912286765778665
+    Attrib puertas=3    -1.9237026931451975
+    Attrib puertas=4    1.2011523097765646
+    Attrib puertas=5more    1.211272680535861
+    Attrib personas=2    2.019671789277263
+    Attrib personas=3    0.01089368562980031
+    Attrib personas=4    -0.5914920919985126
+    Attrib personas=more    -1.9779078942464587
+    Attrib lug_boot=small    -0.8197899317293085
+    Attrib lug_boot=med    1.771558931912687
+    Attrib lug_boot=big    -1.5256237847796343
+    Attrib seguridad=low    1.5528388199551704
+    Attrib seguridad=med    -0.045557619873622085
+    Attrib seguridad=high    -2.130062052682841
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    0.1594412139577395
+    Attrib compra=vhigh    2.3135813864174546
+    Attrib compra=high    0.3417491071294664
+    Attrib compra=med    -0.966194642513493
+    Attrib compra=low    -1.9796453356369326
+    Attrib maint=vhigh    1.8106105366704897
+    Attrib maint=high    0.46349531899706203
+    Attrib maint=med    -0.8765528061196918
+    Attrib maint=low    -1.7948379160696981
+    Attrib puertas=2    0.5420357018336274
+    Attrib puertas=3    1.6338978141744407
+    Attrib puertas=4    -1.3093470895784338
+    Attrib puertas=5more    -1.3117846611684103
+    Attrib personas=2    1.2968985451794524
+    Attrib personas=3    0.028867216387033698
+    Attrib personas=4    -1.700630743181939
+    Attrib personas=more    0.22008571219444303
+    Attrib lug_boot=small    0.5187075599812018
+    Attrib lug_boot=med    0.7909751024403477
+    Attrib lug_boot=big    -1.5734293653644376
+    Attrib seguridad=low    1.0154000372838914
+    Attrib seguridad=med    0.1819782010606923
+    Attrib seguridad=high    -1.3656963541734897
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.5813278412536362
+    Attrib compra=vhigh    1.271186029397024
+    Attrib compra=high    0.9120945467619846
+    Attrib compra=med    -1.00805170377133
+    Attrib compra=low    -0.16412121417276948
+    Attrib maint=vhigh    1.2308185085306529
+    Attrib maint=high    1.2540216052157318
+    Attrib maint=med    -1.0827149792140882
+    Attrib maint=low    -0.3209169268683715
+    Attrib puertas=2    2.616532351287799
+    Attrib puertas=3    0.7136251209949662
+    Attrib puertas=4    -1.1279699559799534
+    Attrib puertas=5more    -1.1290735615937417
+    Attrib personas=2    1.9122229760670018
+    Attrib personas=3    0.043724275445160055
+    Attrib personas=4    0.18085020520513467
+    Attrib personas=more    -1.5129417596669106
+    Attrib lug_boot=small    4.120310115904578
+    Attrib lug_boot=med    0.2512236812250829
+    Attrib lug_boot=big    -3.8004863371827784
+    Attrib seguridad=low    2.235533196342903
+    Attrib seguridad=med    3.0852497544988955
+    Attrib seguridad=high    -4.769913946398902
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    0.45805087698052305
+    Attrib compra=vhigh    2.3548331035347703
+    Attrib compra=high    -1.0139950752704832
+    Attrib compra=med    -0.04933927243496996
+    Attrib compra=low    -2.2254220139368717
+    Attrib maint=vhigh    0.036169917652070296
+    Attrib maint=high    1.7320795635894435
+    Attrib maint=med    -1.5504284233231724
+    Attrib maint=low    -1.1716725422407253
+    Attrib puertas=2    -0.3524282230578535
+    Attrib puertas=3    0.3040415812119792
+    Attrib puertas=4    -0.4428257082989233
+    Attrib puertas=5more    -0.4300741034442863
+    Attrib personas=2    4.079531607481621
+    Attrib personas=3    -0.04877970971376486
+    Attrib personas=4    -1.7414476104832777
+    Attrib personas=more    -2.85331344385073
+    Attrib lug_boot=small    0.35932353783759496
+    Attrib lug_boot=med    -0.2672290858627536
+    Attrib lug_boot=big    -0.5362703735912301
+    Attrib seguridad=low    3.3225666079530174
+    Attrib seguridad=med    -1.3068555679734746
+    Attrib seguridad=high    -2.558556114635662
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    2.1567567789355793
+    Attrib compra=vhigh    4.154209532389093
+    Attrib compra=high    3.6035746245639046
+    Attrib compra=med    -3.6870695542448337
+    Attrib compra=low    -8.291078656806143
+    Attrib maint=vhigh    4.826530099403852
+    Attrib maint=high    1.6503048755051295
+    Attrib maint=med    -3.119365635679563
+    Attrib maint=low    -7.619710012262641
+    Attrib puertas=2    0.1664035894641697
+    Attrib puertas=3    -0.9379392134064576
+    Attrib puertas=4    -1.7808678707454535
+    Attrib puertas=5more    -1.7853264293591726
+    Attrib personas=2    -2.0439213474879585
+    Attrib personas=3    0.02253320527168641
+    Attrib personas=4    0.3107540322993047
+    Attrib personas=more    -0.4150867529486631
+    Attrib lug_boot=small    2.033308369290609
+    Attrib lug_boot=med    -1.0257030370349678
+    Attrib lug_boot=big    -3.1253633160833485
+    Attrib seguridad=low    -2.077964949647157
+    Attrib seguridad=med    2.2702591223797137
+    Attrib seguridad=high    -2.3103817932614943
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -0.4639317874072409
+    Attrib compra=vhigh    1.3146544913153886
+    Attrib compra=high    0.5870295090754329
+    Attrib compra=med    0.5811651231600066
+    Attrib compra=low    -1.5911729690924465
+    Attrib maint=vhigh    1.152731648925245
+    Attrib maint=high    0.5079434065512956
+    Attrib maint=med    -0.6809528509406704
+    Attrib maint=low    -0.19448628340432209
+    Attrib puertas=2    3.358218051119398
+    Attrib puertas=3    -0.7926324240241088
+    Attrib puertas=4    -0.8779127553926734
+    Attrib puertas=5more    -0.8823551390877807
+    Attrib personas=2    1.5824765446160367
+    Attrib personas=3    -0.032086004273376864
+    Attrib personas=4    0.04130183852050764
+    Attrib personas=more    -1.125632342240661
+    Attrib lug_boot=small    3.5026385247702376
+    Attrib lug_boot=med    -1.0181320928882012
+    Attrib lug_boot=big    -2.1180706444769037
+    Attrib seguridad=low    1.6195801291364995
+    Attrib seguridad=med    0.4319973410892624
+    Attrib seguridad=high    -1.6222463945386607
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    0.6536114829372939
+    Attrib compra=vhigh    2.6474144533302497
+    Attrib compra=high    -0.11534749123672423
+    Attrib compra=med    -2.2302285445682375
+    Attrib compra=low    -1.6152639698273563
+    Attrib maint=vhigh    2.500201890159105
+    Attrib maint=high    0.3303807993460858
+    Attrib maint=med    -2.0372212033326176
+    Attrib maint=low    -2.006170606132965
+    Attrib puertas=2    -0.7902034655833516
+    Attrib puertas=3    -0.1933088920727814
+    Attrib puertas=4    -0.10870559142690366
+    Attrib puertas=5more    -0.10677659869349065
+    Attrib personas=2    4.2189072146859745
+    Attrib personas=3    0.02662139072636649
+    Attrib personas=4    -2.3402733788626233
+    Attrib personas=more    -2.478357342613713
+    Attrib lug_boot=small    -1.0620707798605558
+    Attrib lug_boot=med    -0.12470155151126551
+    Attrib lug_boot=big    0.5949355432941631
+    Attrib seguridad=low    4.4321387542655595
+    Attrib seguridad=med    -2.9169551657721238
+    Attrib seguridad=high    -2.082472046455192
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -0.4344035586659007
+    Attrib compra=vhigh    2.6610847242317353
+    Attrib compra=high    3.8691736728789734
+    Attrib compra=med    -3.2194186216443423
+    Attrib compra=low    -2.4620548973192844
+    Attrib maint=vhigh    5.193422445011474
+    Attrib maint=high    -1.8620758543335136
+    Attrib maint=med    -1.3170444697321706
+    Attrib maint=low    -1.264332393188413
+    Attrib puertas=2    0.9007493040487289
+    Attrib puertas=3    0.9514418026600867
+    Attrib puertas=4    -0.4843159775091982
+    Attrib puertas=5more    -0.48575202086599784
+    Attrib personas=2    2.9142703711801277
+    Attrib personas=3    0.03122804402241036
+    Attrib personas=4    -0.506212754187636
+    Attrib personas=more    -2.0100678394610454
+    Attrib lug_boot=small    1.6866735282416554
+    Attrib lug_boot=med    -0.033948627171137724
+    Attrib lug_boot=big    -1.2144914991014049
+    Attrib seguridad=low    3.182788875134136
+    Attrib seguridad=med    0.31011931387825
+    Attrib seguridad=high    -3.0674703225818507
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -0.6869481235262621
+    Attrib compra=vhigh    1.031426044492345
+    Attrib compra=high    1.5499771169031085
+    Attrib compra=med    -1.0252252509832416
+    Attrib compra=low    -0.2394177314686557
+    Attrib maint=vhigh    1.9044697280259821
+    Attrib maint=high    -0.5412345154120783
+    Attrib maint=med    0.010629234982562021
+    Attrib maint=low    -0.02431721838712999
+    Attrib puertas=2    3.063502293297613
+    Attrib puertas=3    -1.03870389438252
+    Attrib puertas=4    -0.36333072042303394
+    Attrib puertas=5more    -0.37879507825664754
+    Attrib personas=2    3.085221431628899
+    Attrib personas=3    -0.0282213845464803
+    Attrib personas=4    -3.6786202105489303
+    Attrib personas=more    1.24522107152615
+    Attrib lug_boot=small    2.680098730034839
+    Attrib lug_boot=med    -0.9926637899995516
+    Attrib lug_boot=big    -1.0875874098969345
+    Attrib seguridad=low    3.5198185558175354
+    Attrib seguridad=med    -1.3671677044599062
+    Attrib seguridad=high    -1.557926766977292
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    1.0472907172910975
+    Attrib compra=vhigh    -0.46399892644429175
+    Attrib compra=high    1.30193803796925
+    Attrib compra=med    -1.0610396548275183
+    Attrib compra=low    -2.036847129095279
+    Attrib maint=vhigh    -0.24284162059037886
+    Attrib maint=high    0.5645267068725358
+    Attrib maint=med    -0.8626072561716063
+    Attrib maint=low    -1.5784370035397477
+    Attrib puertas=2    -0.22204486044692262
+    Attrib puertas=3    -0.3439882936227604
+    Attrib puertas=4    -0.791481551159082
+    Attrib puertas=5more    -0.8073727799051649
+    Attrib personas=2    2.304125884274806
+    Attrib personas=3    0.03511126155577392
+    Attrib personas=4    -1.640089979645304
+    Attrib personas=more    -1.7624278657098333
+    Attrib lug_boot=small    0.07811729114195225
+    Attrib lug_boot=med    -0.8120598660603143
+    Attrib lug_boot=big    -0.3204054544875914
+    Attrib seguridad=low    2.013636185853576
+    Attrib seguridad=med    -1.2591804575543322
+    Attrib seguridad=high    -1.8584723714199778
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -1.119109218128075
+    Attrib compra=vhigh    1.5342251140797107
+    Attrib compra=high    0.6757630703370173
+    Attrib compra=med    0.5056779703444368
+    Attrib compra=low    -0.39619542087874793
+    Attrib maint=vhigh    1.0064738681806886
+    Attrib maint=high    1.174180872496234
+    Attrib maint=med    0.0351191373964037
+    Attrib maint=low    -0.020955336088373272
+    Attrib puertas=2    3.378571757739167
+    Attrib puertas=3    -0.670368979824569
+    Attrib puertas=4    -0.20046231919407195
+    Attrib puertas=5more    -0.1709027975158352
+    Attrib personas=2    2.349906258028071
+    Attrib personas=3    -0.03358988941089286
+    Attrib personas=4    -2.6919888357413426
+    Attrib personas=more    1.4538552191690142
+    Attrib lug_boot=small    3.2957276839463745
+    Attrib lug_boot=med    -0.3312360318267622
+    Attrib lug_boot=big    -1.7681896620362323
+    Attrib seguridad=low    2.285742252881535
+    Attrib seguridad=med    0.06771455680509499
+    Attrib seguridad=high    -1.1981622311493578
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -0.514191087736081
+    Attrib compra=vhigh    -3.752999977323331
+    Attrib compra=high    -3.5530480320475766
+    Attrib compra=med    3.782405024593398
+    Attrib compra=low    4.479188183370045
+    Attrib maint=vhigh    -3.82801788938491
+    Attrib maint=high    -3.1084869625411766
+    Attrib maint=med    3.735880177462046
+    Attrib maint=low    4.262933642960612
+    Attrib puertas=2    2.8809608776836932
+    Attrib puertas=3    0.8456927528083482
+    Attrib puertas=4    -1.2761630259238026
+    Attrib puertas=5more    -1.275820816002731
+    Attrib personas=2    4.02896315057308
+    Attrib personas=3    -0.023358333301351765
+    Attrib personas=4    -0.7819143013269078
+    Attrib personas=more    -2.678792241224985
+    Attrib lug_boot=small    4.622873168662226
+    Attrib lug_boot=med    -0.08266890287969439
+    Attrib lug_boot=big    -4.111462380070941
+    Attrib seguridad=low    1.8421522592268476
+    Attrib seguridad=med    3.576109157037207
+    Attrib seguridad=high    -4.838104971203581
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    1.3517967536935314
+    Attrib compra=vhigh    2.4356979695888388
+    Attrib compra=high    2.778038099776968
+    Attrib compra=med    -3.2730958034522852
+    Attrib compra=low    -4.585840965759773
+    Attrib maint=vhigh    3.9657214452119054
+    Attrib maint=high    -1.249331697059122
+    Attrib maint=med    -2.4792018415779795
+    Attrib maint=low    -2.968008220626348
+    Attrib puertas=2    0.06994659304401905
+    Attrib puertas=3    -0.45344677396977756
+    Attrib puertas=4    -1.1779077049089273
+    Attrib puertas=5more    -1.1762676499098343
+    Attrib personas=2    -2.313757542727291
+    Attrib personas=3    0.04151418277743167
+    Attrib personas=4    0.7716620538202345
+    Attrib personas=more    0.11090435055610601
+    Attrib lug_boot=small    1.1149431937398777
+    Attrib lug_boot=med    0.010888756724986846
+    Attrib lug_boot=big    -2.441447668437133
+    Attrib seguridad=low    -2.3512802704975635
+    Attrib seguridad=med    2.1743945184616646
+    Attrib seguridad=high    -1.1571546515187485
+Class unacc
+    Input
+    Node 0
+Class acc
+    Input
+    Node 1
+Class good
+    Input
+    Node 2
+Class vgood
+    Input
+    Node 3
+
+
+Time taken to build model: 344.93 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1723               99.7106 %
+Incorrectly Classified Instances         5                0.2894 %
+Kappa statistic                          0.9937
+Mean absolute error                      0.0064
+Root mean squared error                  0.0423
+Relative absolute error                  2.7927 %
+Root relative squared error             12.5066 %
+Total Number of Instances             1728     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,999    0,002    0,999      0,999    0,999      0,997    1,000     1,000     unacc
+                 0,990    0,001    0,997      0,990    0,993      0,992    1,000     0,999     acc
+                 1,000    0,002    0,958      1,000    0,979      0,978    1,000     0,979     good
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     vgood
+Weighted Avg.    0,997    0,002    0,997      0,997    0,997      0,995    1,000     0,999     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1209    1    0    0 |    a = unacc
+    1  380    3    0 |    b = acc
+    0    0   69    0 |    c = good
+    0    0    0   65 |    d = vgood
+
