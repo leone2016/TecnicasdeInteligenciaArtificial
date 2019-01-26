@@ -123,15 +123,152 @@ FIRE    1 poison_apple: f-12
 7.-	Establece en este paso la estrategia de resolución de conflictos en profundidad mediante el comando: (set-strategy depth). Por defecto, la estrategia de resolución de conflictos en CLIPS es en profundidad (depth). Sin embargo, ejecuta el comando mencionado anteriormente para asegurarte de que la configuración de la ejecución es correcta. En CLIPS 6.3, y en versiones anteriores, existe también la posibilidad de configurar las opciones de ejecución a través del menú Execution -> Options tal como se muestra en la Figura 2. Aunque se ha observado que algunas distribuciones de CLIPS, en concreto para MAC, no configuran bien la estrategia de resolución de conflictos mediante el cuadro de diálogo mostrado en la Figura 2. Por este motivo, recomendamos modificar la estrategia de resolución de conflictos mediante línea de comandos para asegurarse de que la estrategia configurada es la de profundidad. 
 
  
- > salida paso 7
  <p align="center">
    <img width="460" height="300" src="https://raw.githubusercontent.com/leone2016/TecnicasdeInteligenciaArtificial/master/laboratorioClips/resolicionConflictos.png">
  </p>
+
+ 
+ > salida paso 7
+  
  ````console
  CLIPS> (set-strategy depth)
  depth
  ````
  
+ 8.- Ejecuta el comando (reset) para borrar las reglas activadas de la agenda, manteniendo su definición, y eliminar los hechos que se hayan podido generar (si estás realizando pruebas) volviendo a la lista de hechos inicial determinada por el comando (deffacts) ejecutado en el paso 2.
  
+ > salida paso 8
+ 
+ ````console
+ CLIPS> (reset)
+ <== f-1     (color roja)
+ <== f-2     (color verde)
+ <== f-3     (color amarilla)
+ <== f-4     (tamano grande)
+ <== f-5     (tamano pequena)
+ <== f-7     (manzanas verde pequena)
+ <== f-9     (manzanas roja grande)
+ <== f-10    (manzanas verde grande)
+ <== f-11    (manzanas amarilla grande)
+ <== f-12    (manzana envenenada)
+ <== f-13    (blancanieves muerta)
+ ==> f-1     (color roja)
+ ==> f-2     (color verde)
+ ==> f-3     (color amarilla)
+ ==> f-4     (tamano grande)
+ ==> Activation 0      concate: f-3,f-4
+ ==> Activation 0      concate: f-2,f-4
+ ==> Activation 0      concate: f-1,f-4
+ ==> f-5     (tamano pequena)
+ ==> Activation 0      concate: f-3,f-5
+ ==> Activation 0      concate: f-2,f-5
+ ==> Activation 0      concate: f-1,f-5
+ CLIPS> 
+ 
+ ```` 
+ 
+ 
+ 9.- Ejecuta las reglas utilizando el comando (run). Recuerda que la resolución de conflictos se va a realizar mediante la estrategia depth (en profundidad). En la consola puedes observar el orden en que se ejecutan (o disparan) las reglas [FIRE], los hechos que generan [==> f-] o eliminan [<== f-] las reglas disparadas, y las nuevas reglas que son aplicables (que se activan [Activation]) al haberse generado nuevos hechos. Copia en el informe la salida que genera CLIPS (salida mostrada en la ventana de dialogo -Dialog Window- en CLIPS 6.3 o en la consola en CLIPS 6.4) al ejecutar las reglas con el comando (run). De forma alternativa, en vez de utilizar el comendo (run), también puedes utilizar el comando (run 1) que ejecuta sólo una regla. Ejecutando varias veces el comando (run 1) hasta que no queden reglas activas en la Agenda podrás observar cómo se modifica la lista de hechos (Facts) y la agenda (Agenda) con la ejecución de cada una de las reglas. 
+ 
+ > salida paso 9
+ 
+ ````console
+ CLIPS> (run)
+ FIRE    1 concate: f-1,f-5
+ ==> f-6     (manzanas roja pequena)
+ ==> Activation 0      small-apples: f-6
+ FIRE    2 small-apples: f-6
+ <== f-6     (manzanas roja pequena)
+ FIRE    3 concate: f-2,f-5
+ ==> f-7     (manzanas verde pequena)
+ FIRE    4 concate: f-3,f-5
+ ==> f-8     (manzanas amarilla pequena)
+ ==> Activation 0      small-apples: f-8
+ FIRE    5 small-apples: f-8
+ <== f-8     (manzanas amarilla pequena)
+ FIRE    6 concate: f-1,f-4
+ ==> f-9     (manzanas roja grande)
+ ==> Activation 0      big-red-apple: f-9
+ FIRE    7 big-red-apple: f-9
+ ==> f-10    (manzana envenenada)
+ ==> Activation 0      poison_apple: f-10
+ FIRE    8 poison_apple: f-10
+ ==> f-11    (blancanieves muerta)
+ FIRE    9 concate: f-2,f-4
+ ==> f-12    (manzanas verde grande)
+ FIRE   10 concate: f-3,f-4
+ ==> f-13    (manzanas amarilla grande)
+ ````
+ 
+ 
+10.- Cambia la estrategia de resolución de conflictos de reglas a anchura (breadth), ejecutando el siguiente comando: (set-strategy breadth). En CLIPS 6.3 podrías hacerlo a través del menú Execution->Options, pero por el motivo expuesto en el paso 7 es preferible utilizar la línea de comandos. 
 
+> salida paso 10
+
+````console
+CLIPS> (set-strategy breadth)
+depth
+````
+
+11.	Ejecuta el comando (reset) para borrar las reglas activadas de la agenda y eliminar los hechos volviendo a la lista de hechos inicial determinada por el comando (deffacts) ejecutado en el paso 2. 
+
+>salida paso 11
+
+````console
+CLIPS> (reset)
+<== f-1     (color roja)
+<== f-2     (color verde)
+<== f-3     (color amarilla)
+<== f-4     (tamano grande)
+<== f-5     (tamano pequena)
+<== f-7     (manzanas verde pequena)
+<== f-9     (manzanas roja grande)
+<== f-10    (manzana envenenada)
+<== f-11    (blancanieves muerta)
+<== f-12    (manzanas verde grande)
+<== f-13    (manzanas amarilla grande)
+==> f-1     (color roja)
+==> f-2     (color verde)
+==> f-3     (color amarilla)
+==> f-4     (tamano grande)
+==> Activation 0      concate: f-3,f-4
+==> Activation 0      concate: f-2,f-4
+==> Activation 0      concate: f-1,f-4
+==> f-5     (tamano pequena)
+==> Activation 0      concate: f-3,f-5
+==> Activation 0      concate: f-2,f-5
+==> Activation 0      concate: f-1,f-5
+````
+
+
+>salida paso 12
+
+````console
+CLIPS> (run)
+FIRE    1 concate: f-3,f-4
+==> f-6     (manzanas amarilla grande)
+FIRE    2 concate: f-2,f-4
+==> f-7     (manzanas verde grande)
+FIRE    3 concate: f-1,f-4
+==> f-8     (manzanas roja grande)
+==> Activation 0      big-red-apple: f-8
+FIRE    4 concate: f-3,f-5
+==> f-9     (manzanas amarilla pequena)
+==> Activation 0      small-apples: f-9
+FIRE    5 concate: f-2,f-5
+==> f-10    (manzanas verde pequena)
+FIRE    6 concate: f-1,f-5
+==> f-11    (manzanas roja pequena)
+==> Activation 0      small-apples: f-11
+FIRE    7 big-red-apple: f-8
+==> f-12    (manzana envenenada)
+==> Activation 0      poison_apple: f-12
+FIRE    8 small-apples: f-9
+<== f-9     (manzanas amarilla pequena)
+FIRE    9 small-apples: f-11
+<== f-11    (manzanas roja pequena)
+FIRE   10 poison_apple: f-12
+==> f-13    (blancanieves muerta)
+CLIPS> 
+````
  
