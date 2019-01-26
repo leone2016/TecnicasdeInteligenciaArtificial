@@ -88,6 +88,46 @@ almacena el identificador de **(situacion estable)**, esta referencia del identi
 (   assert (emergencia (problema incendio) )    )
 ````
 
+## EJERCICIO FACTORIAL
+
+````JS 
+CLIPS> (defrule factorial
+		(  fact_run ?x )
+=> 
+        (   assert ( fact ?x 1  )    )
+     
+)
+````
+
+````JS 
+CLIPS> (defrule fact_helper
+		(  fact ?x ?y )
+		(  test (> ?x 0) )
+=> 
+        (   assert ( fact (- ?x 1)(* ?x ?y) )    )
+     
+)
+````
+
+````JS 
+CLIPS> (defrule fact_print
+		(  fact 0 ?x )
+=> 
+        (   printout t ?x  )
+     
+)
+````
+
+````JS 
+CLIPS> ( assert (fact_run 5 ) )
+````
+
+````JS 
+CLIPS> ( assert (fact_run 5 ) )
+````
+````JS 
+CLIPS> (run )
+````
 
 
 
