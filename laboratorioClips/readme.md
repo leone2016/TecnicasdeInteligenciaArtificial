@@ -1,4 +1,4 @@
-# Clase magistral CLIPS
+# Clase magistral CLIPS - sistemas expertos
 ###### Máster Universitario en Análisis y Visualización de Datos Masivos/ Visual Analytics and Big Data
 ### Plantilla de hecho emergencia
 * Tiene simbolos permitidos
@@ -6,7 +6,7 @@
 ````JS 
 (deftemplate emergencia
 (slot problema
-(allowed-symbols incendio inundacion cortoCircuito sobreCarga, inexistente)(default inexistente))
+(allowed-symbols incendio inundacion cortocircuito sobrecarga, inexistente)(default inexistente))
 )
 ````
 
@@ -24,7 +24,7 @@
 (respuesta)
 )
 ````
-### luego se ejecuta un reset para visualizar los hechos 
+### Luego se ejecuta un reset para visualizar los hechos 
 ```(reset)```
 
 > En la seccion FACT f-1 f-2 f-3 estos indicadores unicos corresponden a hechos iniciales, para visualizarlo
@@ -57,6 +57,38 @@ almacena el identificador de **(situacion estable)**, esta referencia del identi
 )
 ````
 
-## crear otra regla que si hay otra situacion inestable se ha de evacuar el edificio
+#### Crear regla, si hay otra situacion inestable se ha de evacuar el edificio
+
+````JS 
+(defrule emergencia-general
+		(	situacion inestable )
+=> 
+        (   assert (   evacuar-edificio)    )
+     
+)
+````
+#### crear regla, si hay un incendio o una inundación se a de desconectar el sistema eléctrico
+
+````JS 
+(defrule desconectar-sistema-electrico
+		(   or (emergencia ( problema inundacion )  ) 
+		       (emergencia ( problema incendio )    ) 
+		)
+=> 
+        (   assert (   respuesta (accion desconectar-sistema-electrico ) )    )
+     
+)
+````
+
+
+## Activar los hechos
+
+### Activa un hecho relativo a un incendio
+````JS 
+(   assert (emergencia (problema incendio) )    )
+````
+
+
+
 
 			
