@@ -30,12 +30,12 @@ CLIPS> (reset)
 
 ````JS 
 CLIPS> (defrule concate
-		(  color ?x )
-		(  tamano ?y )
-=> 
-        ( assert( manzanas ?x ?y )  )
+            (  color ?x )
+            (  tamano ?y )
+        => 
+            ( assert( manzanas ?x ?y )  )
      
-)
+        )
 ````
 > salida paso 3
 ````CONSOLE
@@ -58,13 +58,13 @@ FIRE    6 concate: f-3,f-4
 
 
 ````JS 
-(defrule small-apples
-?f <- (manzanas ~verde pequena)
-=>
-(retract ?f)
-)
+CLIPS> (defrule small-apples
+            ?f <- (manzanas ~verde pequena)
+        =>
+            (retract ?f)
+        )
 
-(run)
+CLIPS> (run)
 ````
 
 > salida paso 4
@@ -80,5 +80,48 @@ FIRE    2 small-apples: f-6
 ````
 
 5.-	Añade una regla que afirme que si hay una manzana roja grande, hay una manzana envenenada (manzana envenenada).
+
+ 
+````JS 
+CLIPS> (defrule big-red-apple
+            ?f <- (manzanas roja grande)
+        =>
+            (  assert ( manzana envenenada ) )
+        )
+
+CLIPS> (run)
+````
+ > salida paso 5
+ 
+ ````console
+ ==> Activation 0      big-red-apple: f-9
+ CLIPS> (run)
+ FIRE    1 big-red-apple: f-9
+ ==> f-12    (manzana envenenada)
+ ````
+ 
+6.-	Añade otra regla que afirme que si existe una manzana envenenada Blancanieves muere (blancanieves muerta).
+
+ ````JS 
+ CLIPS> (defrule poison_apple
+             ?f <- (manzana envenenada)
+         =>
+             (  assert ( blancanieves muerta ) )
+         )
+ 
+ CLIPS> (run)
+ ````
+ > salida paso 6
+ 
+ ````console
+==> Activation 0      poison_apple: f-12
+CLIPS> (run)
+FIRE    1 poison_apple: f-12
+==> f-13    (blancanieves muerta)
+````
+
+7.-	Establece en este paso la estrategia de resolución de conflictos en profundidad mediante el comando: (set-strategy depth). Por defecto, la estrategia de resolución de conflictos en CLIPS es en profundidad (depth). Sin embargo, ejecuta el comando mencionado anteriormente para asegurarte de que la configuración de la ejecución es correcta. En CLIPS 6.3, y en versiones anteriores, existe también la posibilidad de configurar las opciones de ejecución a través del menú Execution -> Options tal como se muestra en la Figura 2. Aunque se ha observado que algunas distribuciones de CLIPS, en concreto para MAC, no configuran bien la estrategia de resolución de conflictos mediante el cuadro de diálogo mostrado en la Figura 2. Por este motivo, recomendamos modificar la estrategia de resolución de conflictos mediante línea de comandos para asegurarse de que la estrategia configurada es la de profundidad. 
+
+ 
 
  
