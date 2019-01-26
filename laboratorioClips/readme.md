@@ -1,39 +1,38 @@
 # Clase magistral CLIPS
-
-
-### plantilla de hecho emergencia
+###### Máster Universitario en Análisis y Visualización de Datos Masivos/ Visual Analytics and Big Data
+### Plantilla de hecho emergencia
 * Tiene simbolos permitidos
 * Por defecto el hecho mergencia se creará como inexistente
-```
+````JS 
 (deftemplate emergencia
 (slot problema
 (allowed-symbols incendio inundacion cortoCircuito sobreCarga, inexistente)(default inexistente))
 )
-```
+````
 
-### plantilla de hecho respuesta
+### Plantilla de hecho respuesta
 * Tiene un unico campo y por defecto toma el valor de ninguna
-```
+````JS 
 (deftemplate respuesta 
 (slot accion (default ninguna)))
-```
-### hechos iniciales 
-```
+````
+### Hechos iniciales 
+````JS 
 (deffacts situacion-iniciales
 (situacion estable)
 (emergencia)
 (respuesta)
 )
-```
+````
 ### luego se ejecuta un reset para visualizar los hechos 
 ```(reset)```
 
-> en la seccion FACT f-1 f-2 f-3 estos indicadores unicos corresponden a hechos iniciales, para visualizarlo
+> En la seccion FACT f-1 f-2 f-3 estos indicadores unicos corresponden a hechos iniciales, para visualizarlo
 de diferente forma se usa
 ``` (facts)``` 
 
 ## INGRESAR UNA REGLA	
->se lo realiza con el comando defrule y de  nombre emergencia-incendio
+>Se lo realiza con el comando defrule y de  nombre emergencia-incendio
 atras de la flecha ( atras => delante)  se tiene el antecedente de la regla y delante el concecuente 
 
 > **ANTECEDENTE** :: si se da un hecho emergencia con el campo problema = incendio y ademas se da una situacion estable
@@ -49,23 +48,12 @@ almacena el identificador de **(situacion estable)**, esta referencia del identi
 
 ````JS 
 (defrule emergencia-incendio
-		(
-			emergencia (problema incendio)
-		)?situacion <- (situacion estable)
+		(	emergencia (problema incendio)	)?situacion <- (situacion estable)
 => 
-        (assert (
-                    respuesta (accion activa-extintor-incendio)
-            )
-        )
-        (assert(
-                respuesta (accion llamar-bomberos)	
-            )
-        )
+        (   assert (   respuesta (accion activa-extintor-incendio)     )    )
+        (   assert (   respuesta (accion llamar-bomberos)   )   )
         (retract ?situacion)
-        (assert(
-                    situacion inestable
-            ) 
-        )
+        (   assert(    situacion inestable    )   )
 )
 ````
 
