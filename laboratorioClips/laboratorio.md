@@ -240,6 +240,7 @@ CLIPS> (reset)
 ==> Activation 0      concate: f-1,f-5
 ````
 
+12.- Ejecuta las reglas utilizando el comando (run). Recuerda que la resolución de conflictos se va a realizar mediante la estrategia breadth (en anchura). Al igual que en el paso 9 puedes observar el orden en que se ejecutan las reglas. Copia en el informe la salida que genera CLIPS (salida mostrada en la ventana de dialogo -Dialog Window- en CLIPS 6.3 o en la consola en CLIPS 6.4) al ejecutar las reglas con el comando (run). 
 
 >salida paso 12
 
