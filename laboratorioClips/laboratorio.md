@@ -123,5 +123,15 @@ FIRE    1 poison_apple: f-12
 7.-	Establece en este paso la estrategia de resolución de conflictos en profundidad mediante el comando: (set-strategy depth). Por defecto, la estrategia de resolución de conflictos en CLIPS es en profundidad (depth). Sin embargo, ejecuta el comando mencionado anteriormente para asegurarte de que la configuración de la ejecución es correcta. En CLIPS 6.3, y en versiones anteriores, existe también la posibilidad de configurar las opciones de ejecución a través del menú Execution -> Options tal como se muestra en la Figura 2. Aunque se ha observado que algunas distribuciones de CLIPS, en concreto para MAC, no configuran bien la estrategia de resolución de conflictos mediante el cuadro de diálogo mostrado en la Figura 2. Por este motivo, recomendamos modificar la estrategia de resolución de conflictos mediante línea de comandos para asegurarse de que la estrategia configurada es la de profundidad. 
 
  
+ > salida paso 7
+ <p align="center">
+   <img width="460" height="300" src="https://raw.githubusercontent.com/leone2016/TecnicasdeInteligenciaArtificial/master/laboratorioClips/resolicionConflictos.png">
+ </p>
+ ````console
+ CLIPS> (set-strategy depth)
+ depth
+ ````
+ 
+ 
 
  
